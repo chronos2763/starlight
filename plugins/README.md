@@ -20,4 +20,4 @@ when a message is processed, its contents are split by spaces (ignoring those be
 ## variables and such
 * author - a table with two elements: nickname, the author's nick; and hostmask, the author's host.
 * last - a table that contains the last message from each nickname. will not update for users included in the `ignore` table defined in `conf.lua`.
-* clock - returns how long the bot has been running for.
+* clock - returns how long in seconds the bot has been running for.

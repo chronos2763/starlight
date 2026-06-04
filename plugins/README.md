@@ -31,3 +31,5 @@ the `editsave(namespace, key, value)` function can be used to edit persistent da
 * persistent save data can be accessed through the `savedata.(your namespace)` table.
 
 there is also `touchsave(namespace)` which creates your namespace without putting anything in it if it does not yet exist, as well as `removesave(namespace, key)` to remove a key from your save data.
+
+all of these can be seen in action in the provided plugins, as well as an example plugin `test.lua`.

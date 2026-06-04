@@ -21,3 +21,13 @@ when a message is processed, its contents are split by spaces (ignoring those be
 * author - a table with two elements: nickname, the author's nick; and hostmask, the author's host.
 * last - a table that contains the last message from each nickname. will not update for users included in the `ignore` table defined in `conf.lua`.
 * clock - returns how long in seconds the bot has been running for.
+
+## persistent data values
+you may want certain values to persist through bot restarts, and this bot supports that.
+
+the `editsave(namespace, key, value)` function can be used to edit persistent data.
+* the first parameter is the namespace your plugin uses, to prevent conflicts with other plugins.
+* the second and third parameters are the key and the value of the data you want to store
+* persistent save data can be accessed through the `savedata.(your namespace)` table.
+
+there is also `touchsave(namespace)` which creates your namespace without putting anything in it if it does not yet exist, as well as `removesave(namespace, key)` to remove a key from your save data.
